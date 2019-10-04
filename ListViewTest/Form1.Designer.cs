@@ -28,13 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("listView1.Groups")))});
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.Name = "listView1";
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.listView1);
+            this.Name = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
